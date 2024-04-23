@@ -16,3 +16,4 @@ set virtualedit=onemore
 set wrapscan
 set hlsearch
 set clipboard=unnamedplus
+syntax on
