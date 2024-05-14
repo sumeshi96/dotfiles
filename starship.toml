@@ -26,9 +26,10 @@ format = '[ $user ]($style)'
 disabled = false
 
 [hostname]
-style = "bg:#171421 #ffffff"
+#style = "bg:#171421 #ffffff"
+style = "#ffffff"
 ssh_only = false
-format = '[@$hostname]($style)'
+format = '[ @$hostname ]($style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
