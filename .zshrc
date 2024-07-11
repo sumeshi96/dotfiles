@@ -1,11 +1,14 @@
- # go
+# go
 export GOPAH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 #ssh  
-eval `ssh-agent -s`
-ssh-add --apple-use-keychain ~/.ssh/gitlab/gitlab_ed25519
-ssh-add --apple-use-keychain ~/.ssh/github/github_ed25519
+#eval `ssh-agent -s`
+#ssh-add --apple-use-keychain ~/.ssh/gitlab/gitlab_ed25519
+#ssh-add --apple-use-keychain ~/.ssh/github/github_ed25519
 
 # git
 autoload -Uz vcs_info
@@ -18,3 +21,23 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 
 eval "$(starship init zsh)"
+
+# ls
+alias ls=eza
+alias ll=eza -al --icons
+alias tree=eza -T --icons
+
+# cat
+alias cat=bat
+
+# od
+alias od=hexyl
+
+# find
+alias find=fd
+
+# ps
+#alias procs=ps
+
+# grep
+alias grep=rg

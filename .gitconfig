@@ -1,0 +1,13 @@
+[user]
+	name = sumeshi96
+	email = yumapc96@gmail.com
+[init]
+	defaultBranch = main
+[grep]
+	lineNumber = true
+[core]
+	ignorecase = false
+	editor = vim
+	quotepath = false
+[color]
+	ui = true
