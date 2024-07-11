@@ -24,8 +24,8 @@ eval "$(starship init zsh)"
 
 # ls
 alias ls=eza
-alias ll=eza -al --icons
-alias tree=eza -T --icons
+alias ll="eza -al --icons"
+alias tree="eza -T --icons"
 
 # cat
 alias cat=bat
