@@ -20,6 +20,7 @@ zstyle ':vcs_info:*' formats "%F{cyan}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 
+# starship
 eval "$(starship init zsh)"
 
 # ls
@@ -40,4 +41,7 @@ alias find=fd
 #alias procs=ps
 
 # grep
-alias grep=rg
+#alias grep=rg
+
+# latex
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
