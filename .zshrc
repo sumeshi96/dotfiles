@@ -1,9 +1,10 @@
 # go
-export GOPAH=$HOME/go
+export GOPATH=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+export CARGO_TARGET_DIR="$HOME/.cargo-target"
 
 #ssh  
 #eval `ssh-agent -s`
@@ -26,7 +27,7 @@ eval "$(starship init zsh)"
 # ls
 alias ls=eza
 alias ll="eza -al --icons"
-alias tree="eza -T --icons"
+alias tree="eza -aT --icons --ignore-glob '.git'"
 
 # cat
 alias cat=bat
@@ -38,10 +39,28 @@ alias od=hexyl
 alias find=fd
 
 # ps
-#alias procs=ps
+alias procs=ps
 
 # grep
-#alias grep=rg
+alias grep=rg
 
 # latex
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# wasmtime
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
+
+# Alacritty
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+# no IME
+export GTK_IM_MODULE=xim
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=none
+
+# zellij
+alias zj=zellij
+export PATH=$HOME/.local/bin:$PATH

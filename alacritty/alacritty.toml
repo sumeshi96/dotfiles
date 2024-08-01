@@ -1,0 +1,32 @@
+live_config_reload = true
+
+import = ["~/dotfiles/alacritty/dracula.toml"]
+
+
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "zellij attach --index 0 --create"]
+
+
+[font]
+  size = 12.0
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+  family = "Hack Nerd Font"
+  style = "Regular"
+
+[font.bold]
+  family = "Hack Nerd Font"
+  style = "Bold"
+
+[font.italic]
+  family = "Hack Nerd Font"
+  style = "Italic"
