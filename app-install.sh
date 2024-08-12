@@ -3,7 +3,7 @@ sudo apt-get update
 sudo apt-get install -y vim zsh git code solaar ca-certificates virtualbox gnupg software-properties-commoni jq
 
 # google-drive-ocamlfuse
-sudo add-apt-repostor ppa:alessandro-strada/ppa
+#sudo add-apt-repostor ppa:alessandro-strada/ppa
 
 # docker
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -41,7 +41,7 @@ wget $SLACK_URL -O slack_latest.deb
 
 # apt install
 sudo apt-get update
-sudo apt-get install -y google-drive-ocamlfuse docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin terraform ansible vivaldi-stable
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin terraform ansible vivaldi-stable
 sudo apt-get install -y ./zoom_amd64.deb ./slack_latest.deb
 
 # rust
