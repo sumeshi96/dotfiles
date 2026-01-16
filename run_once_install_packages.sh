@@ -1,24 +1,46 @@
 #!/bin/bash
 
+if [ "$CI" = "true" ]; then
+  SUDO=""
+else
+  SUDO="sudo"
+fi
+
 #
 # package install 
 #
-
-# apt install
-sudo apt update
-sudo apt install zsh alacritty git build-essential libssl-dev pkg-config
+if [ "$(uname)" = "Linux" ]; then
+  # apt install
+  $SUDO apt update
+  $SUDO apt install -y \ 
+  zsh \
+  alacritty \
+  git \
+  build-essential \
+  libssl-dev \
+  libxcb1-dev \
+  libxcb-render0-dev \
+  libxcb-shape0-dev \
+  libxcb-xfixes0-dev \
+  libharfbuzz-dev \
+  libfontconfig1-dev \
+  libfreetype6-dev \
+  libexpat1-dev \
+  pkg-config
+fi
 
 # change shell
 chsh -s $(which zsh)
 
 # starship install
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 # rust install
 curl --proto '=httpshttps' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # cargo install
-cargo install zellij sheldon eza bat fd ripgrep delta broot zenith silicon
+cargo install cargo-binstall
+cargo binstall zellij sheldon eza bat fd ripgrep delta broot zenith silicon
 
 #
 # font install
