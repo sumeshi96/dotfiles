@@ -24,7 +24,14 @@ if [ "$(uname)" = "Linux" ]; then
 fi
 
 # change shell
-chsh -s $(which zsh)
+if [ "$SHELL" != "$(which zsh)" ]; then
+  if [ "$CI" = "true" ]; then
+    sudo chsh -s $(which zsh) $USER
+  else
+    echo "Changing shell to zsh..."
+    sudo chsh -s $(which zsh)
+  fi
+fi
 
 # starship install
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
