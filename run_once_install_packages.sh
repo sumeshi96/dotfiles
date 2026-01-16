@@ -37,13 +37,13 @@ fi
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 # rust install
-curl --proto '=httpshttps' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # cargo binstall install
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
 # cargo install
-cargo binstall zellij sheldon eza bat fd ripgrep delta broot zenith silicon
+cargo binstall --no-confirm zellij sheldon eza bat fd ripgrep git-delta broot zenith silicon
 
 #
 # font install
