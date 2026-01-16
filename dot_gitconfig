@@ -16,6 +16,7 @@
   quotepath = false
   eol = lf
   crlf = false
+  pager = delta
 
 [init]
   defaultBranch = main
@@ -25,3 +26,13 @@
 
 [status]
   color = auto
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  dark = true
+
+[merge]
+  conflictStyle = zdiff3
