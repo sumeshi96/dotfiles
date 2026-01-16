@@ -43,7 +43,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 
 # cargo install
-cargo binstall --no-confirm zellij sheldon eza bat fd ripgrep git-delta broot zenith silicon
+cargo binstall --no-confirm zellij sheldon eza bat fd-find ripgrep git-delta broot zenith silicon
 
 #
 # font install
