@@ -10,6 +10,7 @@ if [ "$(uname)" = "Linux" ]; then
   zsh \
   alacritty \
   git \
+  # dependencies
   build-essential \
   libssl-dev \
   libxcb1-dev \
@@ -45,6 +46,7 @@ curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-
 # cargo install
 cargo binstall --no-confirm zellij sheldon eza bat fd-find ripgrep git-delta broot silicon
 
+# zellij install
 cargo install --git https://github.com/bvaisvil/zenith.git
 
 #
