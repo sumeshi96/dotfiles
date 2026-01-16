@@ -10,7 +10,6 @@ if [ "$(uname)" = "Linux" ]; then
   zsh \
   alacritty \
   git \
-  # dependencies
   build-essential \
   libssl-dev \
   libxcb1-dev \
