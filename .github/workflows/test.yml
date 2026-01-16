@@ -28,7 +28,6 @@ jobs:
 
       - name: Initaialize and Apply dotfiles
         run: |
-          export CI=true
           chezmoi init --apply --source=$GITHUB_WORKSPACE
 
       - name: Verify tools

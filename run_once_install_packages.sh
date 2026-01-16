@@ -1,18 +1,12 @@
 #!/bin/bash
 
-if [ "$CI" = "true" ]; then
-  SUDO=""
-else
-  SUDO="sudo"
-fi
-
 #
 # package install 
 #
 if [ "$(uname)" = "Linux" ]; then
   # apt install
-  $SUDO apt update
-  $SUDO apt install -y \ 
+  $SUDO apt-get update
+  $SUDO apt-get install -y \ 
   zsh \
   alacritty \
   git \
