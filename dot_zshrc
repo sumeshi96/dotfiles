@@ -1,0 +1,24 @@
+# ~/.zshrc
+
+# export
+export EDITOR='vim'
+export LANG='ja_JP.UTF-8'
+
+# init sheldon
+eval "$(sheldon source)"
+
+# init starship
+eval "$(starship init zsh)"
+
+# rust path
+source "$HOME/.cargo/env"
+
+# alias
+alias ls=eza
+alias cat=bat
+alias fd-find=find
+#alias grep=ripgrep
+alias tree=broot
+alias top=zenith
+
+

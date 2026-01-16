@@ -1,0 +1,27 @@
+[user]
+  name = sumeshi96
+  email = yumapc96@gmail.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+
+[core]
+  editor = vim
+  autoCRLF = false
+  quotepath = false
+  eol = lf
+  crlf = false
+
+[init]
+  defaultBranch = main
+
+[push]
+  default = tracking
+
+[status]
+  color = auto
