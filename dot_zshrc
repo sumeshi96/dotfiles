@@ -13,11 +13,14 @@ eval "$(starship init zsh)"
 # rust path
 source "$HOME/.cargo/env"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # alias
 alias ls=eza
 alias cat=bat
 alias fd-find=find
-#alias grep=ripgrep
+alias grep=rg
 alias tree=broot
 alias top=zenith
 
