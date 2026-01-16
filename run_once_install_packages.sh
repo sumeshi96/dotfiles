@@ -6,7 +6,7 @@
 if [ "$(uname)" = "Linux" ]; then
   # apt install
   sudo apt-get update
-  sudo apt-get install -y \ 
+  sudo apt-get install -y \
   zsh \
   alacritty \
   git \
@@ -18,7 +18,7 @@ if [ "$(uname)" = "Linux" ]; then
   libxcb-xfixes0-dev \
   libharfbuzz-dev \
   libfontconfig1-dev \
-  libfreetype6-dev \
+  libfreetype-dev \
   libexpat1-dev \
   pkg-config
 fi
