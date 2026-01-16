@@ -68,9 +68,17 @@ FONT_DIR="$HOME/.local/share/fonts/HackGenNF"
 mkdir -p "$FONT_DIR"
 
 # .ttf ファイル（フォント本体）を展開先からフォントディレクトリに移動
-mv HackGen_NF_v2.10.0/*.ttf "$FONT_DIR/"
+sudo mv HackGen_NF_v2.10.0/*.ttf "$FONT_DIR/"
 
 echo "フォントファイルを $FONT_DIR にインストールしました。"
 
 # フォントキャッシュの削除
 fc-cache -fv
+
+# sheldon plugin install
+if command -v sheldon &> /dev/null; then
+  echo "Runnning sheldon lock..."
+  sheldon lock
+else
+  echo "Warning; sheldon not found."
+fi

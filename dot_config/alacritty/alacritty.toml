@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/dotfiles/alacritty/dracula.toml"]
+import = ["~/.config/alacritty/dracula.toml"]
 
 [env]
 TERM = "xterm-256color"
