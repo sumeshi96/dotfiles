@@ -5,8 +5,8 @@
 #
 if [ "$(uname)" = "Linux" ]; then
   # apt install
-  $SUDO apt-get update
-  $SUDO apt-get install -y \ 
+  sudo apt-get update
+  sudo apt-get install -y \ 
   zsh \
   alacritty \
   git \
