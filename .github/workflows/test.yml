@@ -6,17 +6,17 @@ on:
   pull_request:
     branches: [main]
 
-jobs:
-  install-test:
+jobs: 
+  install-test: 
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Checkout
         uses: actions/checkout@v6
       
       - name: Install chezmoi
-        rus: sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin
+        run: sh -c "$(curl -fsLS get.chezmoi.io)" -- -b /usr/local/bin
      
-     - name: Cache Cargo
+      - name: Cache Cargo
         uses: actions/cache@v4
         with:
           path: |
@@ -26,34 +26,33 @@ jobs:
             ~/.cargo/git/db/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/plugins.toml') }}
 
-     - name: Initaialize and Apply dotfiles
-       run: |
-       export CI=true
-       chezmoi init --apply --source=$GITHUB_WORKSPACE
+      - name: Initaialize and Apply dotfiles
+        run: |
+        export CI=true
+        chezmoi init --apply --source=$GITHUB_WORKSPACE
 
-     - name: Verify tools
-     run: |
+      - name: Verify tools
+        run: |
+        zsh --version
+        alacritty --version
+        git --version
+        gcc --version
 
-     zsh --version
-     alacritty --version
-     git --version
-     gcc --version
-
-     starship --version
+        starship --version
      
-     cargo --version
-     zellij --version
-     eza --version
-     bat --version
-     fd --version
-     rg --version
-     broot --version
-     zenith --version
-     silicon --version
+        cargo --version
+        zellij --version
+        eza --version
+        bat --version
+        fd --version
+        rg --version
+        broot --version
+        zenith --version
+        silicon --version
       
-     if fc-list :family | grep -i "HackGen Console NF"
-       echo "Font installed successfully"
-     else
-       echo "Font not found"
-       exit 1
-     fi
+        if fc-list :family | grep -i "HackGen Console NF"
+          echo "Font installed successfully"
+        else
+          echo "Font not found"
+          exit 1
+        fi
