@@ -48,6 +48,21 @@ cargo binstall --no-confirm zellij sheldon eza bat fd-find ripgrep git-delta bro
 # zellij install
 cargo install --git https://github.com/bvaisvil/zenith.git
 
+# neovim install
+DIST_DIR="$HOME/.local/share/nvim-linux-x86_64"
+BIN_DIR="$HOME/.local/bin"
+mkdir -p "$DIST_DIR" "$BIN_DIR"
+
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
+tar xzf nvim-linux-x86_64.tar.gz
+
+rm -rf "$DIST_DIR"
+mv nvim-linux-x86_64 "$DIST_DIR"
+
+ln -sf "$DIST_DIR/bin/nvim" "$BIN_DIR/nvim"
+
+rm nvim-linux-x86_64.tar.gz
+
 #
 # font install
 #
