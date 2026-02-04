@@ -24,4 +24,6 @@ alias grep=rg
 alias tree=broot
 alias top=zenith
 
-
+# bitwarden
+export SSH_AUTH_SOCK=$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+alias ubw='export BW_SESSION=$(bw unlock --raw)'
